@@ -5,18 +5,17 @@ import Results from "./Results";
 
 export default function Dictionary() {
   const [word, setWord] = useState(null);
-  const [results, setResults] = useState({});
+  const [results, setResults] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data);
-    console.log(response.data.meanings[0].definition);
-    setResults(response.data);
+    console.log(response.data[0].meanings[0].definitions[0].definition);
+
+    setResults(response.data[0]);
   }
 
   function searchWord(event) {
     event.preventDefault();
-    let apiKey = "cd1da53fbt4d9c2776oe462faaba011d";
-    let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=${apiKey}`;
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -34,7 +33,7 @@ export default function Dictionary() {
         />
         <input type="submit" />
       </form>
-      <Results data={results} />
+      <Results results={results} />
     </div>
   );
 }

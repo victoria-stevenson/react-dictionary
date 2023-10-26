@@ -1,12 +1,25 @@
 import React from "react";
-import Dictionary from "./Dictionary";
+import Meaning from "./Meaning";
 
 export default function Results(props) {
-  return (
-    <div className="Results">
-      <h2>Word</h2>
-      <h5>Meaning</h5>
-      <p>{props.data}</p>
-    </div>
-  );
+  console.log(props.results);
+  if (props.results) {
+    return (
+      <div className="Results">
+        <h2>{props.results.word}</h2>
+        <h3>Meaning</h3>
+        <p>
+          {props.results.meanings.map(function (meaning, index) {
+            return (
+              <div key={index}>
+                <Meaning meaning={meaning} />
+              </div>
+            );
+          })}
+        </p>
+      </div>
+    );
+  } else {
+    return null;
+  }
 }
