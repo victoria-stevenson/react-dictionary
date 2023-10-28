@@ -8,7 +8,7 @@ export default function Phonetics(props) {
         <a href={props.phonetics.audio}>Listen</a>
       </audio>
       <br />
-      {props.phonetics.text}
+      <div className="phonetics-spelling">{props.phonetics.text}</div>
     </div>
   );
 }

@@ -6,7 +6,8 @@ header {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 52px;
+
   text-align: center;
   margin: 50px;
   color: #f0f5fa;
@@ -14,7 +15,7 @@ h1 {
 
 h2 {
   font-size: 36px;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 form {
@@ -67,4 +68,11 @@ footer {
 }
 .hint strong {
   font-weight: 600;
+}
+
+.phonetics-spelling {
+  font-style: italic;
+  margin-left: 5px;
+  padding: 10px;
+  font-size: 16px;
 }
