@@ -8,6 +8,10 @@ h2 {
   margin: 20px 0 10px 0;
 }
 
+.Dictionary {
+  padding-top: 30px;
+}
+
 .Dictionary section {
   padding: 10px;
   background-color: #f7f7f7;
@@ -15,8 +19,4 @@ h2 {
 
 form {
   text-align: center;
-}
-
-.Dictionary {
-  padding-top: 50px;
 }
