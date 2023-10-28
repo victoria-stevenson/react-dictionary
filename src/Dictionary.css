@@ -7,3 +7,16 @@ h2 {
   font-weight: bold;
   margin: 20px 0 10px 0;
 }
+
+.Dictionary section {
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+
+form {
+  text-align: center;
+}
+
+.Dictionary {
+  padding-top: 50px;
+}

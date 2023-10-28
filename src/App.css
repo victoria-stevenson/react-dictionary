@@ -1,6 +1,18 @@
+header {
+  background: #00204a;
+  padding: 35px;
+  border-bottom: 10px solid rgb(201, 0, 0);
+}
+
+section {
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+
 h1 {
   text-align: center;
   margin: 50px;
+  color: #f0f5fa;
 }
 
 footer {
