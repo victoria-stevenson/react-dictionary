@@ -44,7 +44,7 @@ export default function Dictionary(props) {
           <input className="search-button" type="submit" value="Search" />
         </form>
         <div className="hint">
-          <strong>suggested keywords:</strong> hello, coffee, walking, blue,
+          <strong>suggested keywords:</strong> sunset, coffee, walking, blue,
           etc.
         </div>
 
