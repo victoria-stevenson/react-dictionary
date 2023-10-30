@@ -41,6 +41,11 @@ footer {
   text-align: center;
 }
 
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 .Dictionary {
   padding-top: 30px;
 }
