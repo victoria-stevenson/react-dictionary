@@ -8,6 +8,7 @@ export default function Dictionary(props) {
   const [results, setResults] = useState(null);
   const [pictures, setPictures] = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(false);
 
   function handleDictionaryResponse(response) {
     setResults(response.data[0]);
@@ -19,7 +20,12 @@ export default function Dictionary(props) {
 
   function searchWord() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    axios.get(apiUrl).then(handleDictionaryResponse);
+    axios
+      .get(apiUrl)
+      .then(handleDictionaryResponse)
+      .catch(function (error) {
+        setError(true);
+      });
 
     let pexelsApiKey =
       "5EG5uSfsgZVFZWVRbBaQtOOFwnAMoUoL5lYdUgmTuKoJstJmGr8Zpo58";
@@ -59,10 +65,17 @@ export default function Dictionary(props) {
           <strong>suggested keywords:</strong> sunset, coffee, walking, blue,
           etc.
         </div>
+        {error ? (
+          <h4 className="text-center">
+            Oops! No results found, please try again 📂
+          </h4>
+        ) : (
+          <>
+            <Results results={results} />
 
-        <Results results={results} />
-
-        <Pictures pictures={pictures} />
+            <Pictures pictures={pictures} />
+          </>
+        )}
       </div>
     );
   } else {
