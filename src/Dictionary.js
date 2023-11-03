@@ -67,12 +67,11 @@ export default function Dictionary(props) {
         </div>
         {error ? (
           <h4 className="text-center">
-            Oops! No results found, please try again 📂
+            Oops! No results found, please reload the page and try again 📂
           </h4>
         ) : (
           <>
             <Results results={results} />
-
             <Pictures pictures={pictures} />
           </>
         )}
